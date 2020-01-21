@@ -38,6 +38,7 @@ Na API é possível realizar todas as requisições (GET, POST, PUT, PATCH e DEL
 # Siga as URLS de requisições:
 
 - GET:
+
     ``` http://127.0.0.1:8000/api/jobs/ ```. Obter todas as vagas disponíveis. Só será retornado vagas ativas.
     ``` http://127.0.0.1:8000/api/jobs/persons/ ```. Obter todas as pessoas cadastradas nas vagas.
 
@@ -100,7 +101,7 @@ Na API é possível realizar todas as requisições (GET, POST, PUT, PATCH e DEL
 
     ```
 
-Também é possível realizar buscas em case insensitive ou por ID:
+- Também é possível realizar buscas em case insensitive ou por ID:
 
     ```shell
     $ curl http://127.0.0.1:8000/api/jobs/?search=atendimento
@@ -158,7 +159,7 @@ Também é possível realizar buscas em case insensitive ou por ID:
     ```
 
 
-Buscar pessoas cadastradas e vagas selecionadas:
+- Buscar pessoas cadastradas e vagas selecionadas:
 
     ```shell
     $ curl -i http://127.0.0.1:8000/api/jobs/persons/
@@ -209,11 +210,11 @@ Buscar pessoas cadastradas e vagas selecionadas:
         ]
     ```  
  
- Também é possível realizar busca case insensitive, basta utilizar o ```?search=``` no final da URL.
+## Também é possível realizar busca case insensitive, basta utilizar o ```?search=``` no final da URL.
 
 - POST
 
-Cadastrar jobs:
+- Cadastrar jobs:
 
     ```shell
     $ curl -iX POST -H "Content-Type: application/json" -d '{"name": "Programador Java", "descripion": "Lorem Ipsum", "status": true, "salary": "4000.00"}' http://127.0.0.1:8000/api/jobs/
@@ -234,7 +235,7 @@ Cadastrar jobs:
         {"id": 10, "name": "Programador Java", "descripion": "Lorem Ipsum", "status": true, "salary": "4000.00", "company": null, "created_at": "2020-01-20 - 20:11:11."}
     ```
 
-Cadastrar pessoas:
+- Cadastrar pessoas:
 
     ```shell
     $ curl -iX POST -H "Content-Type: application/json" -d '{"name": "Fernando Heitor", "email": "heitor.aguia@gmail.com", "status": true, "phone": "(11) 98600-4400", "bio": "Lorem Ipsum is simply"}' http://127.0.0.1:8000/api/jobs/persons/
@@ -258,7 +259,7 @@ Cadastrar pessoas:
 
 - Delete
 
-Deletar jobs:
+- Deletar jobs:
 
     ```shell
     $ curl -iX DELETE http://127.0.0.1:8000/api/jobs/1/
@@ -276,7 +277,7 @@ Deletar jobs:
 
     ```
 
-Deletar pessoas:
+- Deletar pessoas:
 
     ```shell
     $ curl -iX DELETE http://127.0.0.1:8000/api/jobs/person/1/
@@ -297,7 +298,7 @@ Deletar pessoas:
 
 - PATCH / PUT
 
-Atualizar por Primary Key - jobs:
+- Atualizar por Primary Key - jobs:
 
     ```shell
     $ curl -iX PATCH -H "Content-Type: application/json" -d '{"name": "Programador GO", "descripion": "Vagas de
@@ -319,7 +320,7 @@ Atualizar por Primary Key - jobs:
     ```
 
 
-Atualizar por Primary Key - pessoas:
+- Atualizar por Primary Key - pessoas:
 
     ```shell
     $ curl -iX PATCH -H "Content-Type: application/json" -d '{"phone": "(13) 4003-9022", "bio": "Experiência comprovada em suporte técnico nível II", "jobs": [2,4]}' http://127.0.0.1:8000/api/jobs/person/2/

@@ -12,7 +12,7 @@ help:
 
 
 requirements:
-	pip install requirements-dev.txt
+	pip install - r requirements-dev.txt
 
 superuser:
 	python manage.py createsuperuser
