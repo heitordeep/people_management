@@ -12,7 +12,7 @@ Antes de iniciar o app, é necessário realizar a criação de uma VirtualEnv co
     $ make requirements
     ```
 
-2) Após, realize a migração do BD:
+2) Após a instalação, realize a migração do BD:
 
     ```shell
     $ make migrate_db
